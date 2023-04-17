@@ -1,0 +1,52 @@
+.search-item {
+  width: 270px;
+  height: 360px;
+  min-height: 360px;
+  background-color: rgb(230, 227, 227);
+  margin: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.main-card-image {
+  height: 150px;
+  max-height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.icons-wrapper {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-mdc-card-title {
+  font-size: 18px;
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 0;
+  text-align: center;
+  height: 50px;
+}
+
+.action-btn {
+  height: 32px;
+  width: 120px;
+  align-self: center;
+  border-radius: 5px;
+  border: none;
+  color: rgb(230, 227, 227);
+  background-color: #2F80ED;
+  margin: 20px 0;
+}
+
+.ageBar {
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #2F80ED;
+}

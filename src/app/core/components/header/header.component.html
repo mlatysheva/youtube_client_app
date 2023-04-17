@@ -1,0 +1,62 @@
+<header class="header">
+  <div class="container wrapper">
+    <div class="center-wrapper">
+      <div class="logo"
+        (click)="goHome()"
+      ></div>
+
+      <form 
+        #searchForm 
+        class="search-form"
+        (input)="onSearch($event)"
+      >
+        <input 
+          *ngIf="hasRoute('/main')"
+          matInput
+          class="input-wrapper" 
+          type="text" 
+          placeholder="Search by word or sentence" 
+          [formControl]="query"
+        >
+      </form>
+
+      <button mat-mini-fab
+        class="icon-button"
+        *ngIf="hasRoute('/main')"
+        color="primary"
+        (click)="toggleFilters()"
+        >
+        <mat-icon fontIcon="tune"></mat-icon>
+      </button>
+
+      <button mat-mini-fab
+        class="icon-button"
+        *ngIf="hasRoute('/main')"
+        color="primary"
+        (click)="onAddVideoClick()"
+      >
+        <mat-icon fontIcon="add_circle"></mat-icon>        
+      </button>
+    </div>
+
+    <div class="name-wrapper">
+      <div class="user-name" [innerText]="username"></div>
+      <button 
+        *ngIf="!isAuth"
+        mat-mini-fab 
+        color="primary"
+      >
+        <mat-icon fontIcon="account_circle"></mat-icon>
+      </button>
+
+      <button 
+        *ngIf="isAuth"
+        mat-mini-fab 
+        color="primary" 
+        (click)="onLogout()"
+      >
+        <mat-icon fontIcon="logout_circle"></mat-icon>        
+      </button>
+    </div>
+  </div>
+</header>

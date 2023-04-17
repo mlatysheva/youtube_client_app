@@ -1,0 +1,103 @@
+<div class="wrapper">
+  <form 
+    class="admin-form" 
+    [formGroup]="addVideoForm" 
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="title">Create new card</div>
+    <div class="input-field-wrapper">
+      <label>Title</label>
+      <input 
+        class="input-field"
+        formControlName="title"
+        type="text"
+      >
+      <div class="error" *ngIf="title.invalid && title.touched">
+        <div *ngIf="title.errors?.['required']">
+          Please enter a title
+        </div>
+        <div *ngIf="title.errors?.['minLength']">
+          Title must be at least 3 characters long
+        </div>
+        <div *ngIf="title.errors?.['maxLength']">
+          Title may not exceed 20 characters
+        </div>
+      </div>
+    </div>
+    
+    <div class="input-field-wrapper">
+      <label>Description</label>
+      <input 
+        class="input-field" 
+        formControlName="description"
+        type="text" 
+      >
+      <div class="error" *ngIf="description.invalid && description.touched">
+        <div *ngIf="description.errors?.['maxLength']">
+          Description may not exceed 255 characters
+        </div>
+      </div>
+    </div>
+    <div class="input-field-wrapper">
+      <label>Image</label>
+      <input 
+        class="input-field"
+        formControlName="image"
+        type="text" 
+      >
+      <div class="error" *ngIf="image.invalid && image.touched">
+        <div *ngIf="image.errors?.['required']">
+          Please enter a link to the image
+        </div>
+        <div *ngIf="image.errors?.['urlValidator']">
+          You need to enter an actual url of the image
+        </div>
+      </div>
+    </div>
+    <div class="input-field-wrapper">
+      <label>Link video</label>
+      <input 
+        class="input-field"
+        formControlName="videoLink"
+        type="text" 
+      >
+      <div class="error" *ngIf="videoLink.invalid && videoLink.touched">
+        <div *ngIf="videoLink.errors?.['required']">
+          Please enter a link to the video
+        </div>
+        <div *ngIf="videoLink.errors?.['urlValidator']">
+          The video link is invalid
+        </div>
+      </div>
+    </div>
+    <mat-form-field class="input-field-wrapper">
+      <label>Created on:</label>
+      <input 
+        matInput
+        class="input-field"
+        formControlName="date"
+        type="date" 
+      >
+      <div class="error" *ngIf="date.invalid && date.touched">
+        <div *ngIf="date.errors?.['required']">
+          Please enter the creation date
+        </div>
+        <div *ngIf="date.errors?.['dateValidator']">
+          The date may not be in future
+        </div>
+      </div>
+    </mat-form-field>
+    <button 
+      mat-raised-button
+      class="action-button" 
+      color="primary"
+      [disabled]="!addVideoForm.valid"
+    >Create card</button>
+  </form>
+  <div class="confirmation-section"
+    *ngIf="message"
+  >
+    <div class="success-message">Card successfully created:</div> 
+    <div class="success-message">{{ message }}</div>
+  </div>
+</div>

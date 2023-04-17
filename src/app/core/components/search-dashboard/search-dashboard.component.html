@@ -1,0 +1,32 @@
+<div class="search-dashboard-wrapper" *ngIf="dashboardService.showDashboard && (authService.isAuth$ | async)">
+  <div class="search-options-wrapper">
+    <div class="search-option-label">
+      Sort by
+    </div>
+    <div class="search-option" 
+      (click)="sortByDate()"
+    >         
+      <span>date</span>
+      <mat-icon *ngIf="dateSortOrder === 'asc'">keyboard_arrow_up</mat-icon>
+      <mat-icon *ngIf="dateSortOrder === 'desc'">keyboard_arrow_down</mat-icon>      
+    </div>
+    <div class="search-option"
+      (click)="sortByViews()"
+    >      
+      <span>views</span>
+      <mat-icon *ngIf="viewsSortOrder === 'asc'">keyboard_arrow_up</mat-icon>
+      <mat-icon *ngIf="viewsSortOrder === 'desc'">keyboard_arrow_down</mat-icon>      
+    </div>
+    <div class="search-input-wrapper">
+      <label class="input-label">by word or sentence</label>
+      <input 
+          [(ngModel)]="filterQuery"
+          class="input-wrapper" 
+          type="text" 
+          placeholder="Enter a word or sentence"
+          (input)="setFilterByWord()"
+      >
+    </div>
+  </div>
+
+</div>

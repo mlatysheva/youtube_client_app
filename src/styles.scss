@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@include mat.core();
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+$youtube_client-primary: mat.define-palette(mat.$blue-palette, A400, A700, A200);
+$youtube_client-accent:  mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$youtube_client-warn:    mat.define-palette(mat.$red-palette);
+$youtube_client-theme: mat.define-light-theme((
+  color: (
+    primary: $youtube_client-primary,
+    accent: $youtube_client-accent,
+    warn: $youtube_client-warn,
+  )
+));
+
+@include mat.all-component-themes($youtube_client-theme);
+
+:root {
+  --light-grey: #e5e5e5;
+  --primary-color: #2F80ED;
+  --container-width: 1200px;
+  --secondary-color: rgb(83, 82, 82);
+  --options-color: rgb(173, 173, 173);
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  width: 100%;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

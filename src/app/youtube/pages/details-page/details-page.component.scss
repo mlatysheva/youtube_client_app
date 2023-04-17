@@ -1,0 +1,98 @@
+.search-item {
+  width: 1200px;
+  height: 460px;
+  margin: 0 auto;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+}
+
+.action-btn {
+  height: 32px;
+  width: 32px;
+  background-image: url('../../../../assets/icons/back_button.svg');
+  cursor: pointer;
+}
+
+.box-shadow {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 5px 20px 10px -15px var(--primary-color);
+}
+
+.main-card-image {
+  width: 730px;
+  height: 460px;
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 5px;
+}
+
+.content-wrapper {
+  width: calc(1200px - 32px - 730px);
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(230, 227, 227);
+  box-shadow: 15px 0px 10px -15px var(--primary-color);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.title-date-wrapper {
+  margin: 40px 15px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 200;
+  color: var(--secondary-color);
+}
+
+.small {
+  font-size: 10px;
+}
+
+.medium {
+  font-size: 12px;
+  margin: 40px 15px 50px;
+}
+
+.bold {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+.icons-wrapper {
+  height: 15px;
+  margin: 0 auto;
+  margin-top: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.ageBar {
+  height: 5px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-bottom-right-radius: 5px;
+}
