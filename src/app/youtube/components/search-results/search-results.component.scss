@@ -1,19 +1,22 @@
 .search-results-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   margin-top: 40px;
-  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .title {
-  height: 60px;
   font-family: Roboto;
   font-size: 24px;
   font-weight: 300;
@@ -54,8 +57,6 @@
   margin-top: 20px;
   font-size: 20px;
   font-weight: 300;
-  line-height: 40px;
-  letter-spacing: 0em;
   text-align: left;
   color: #828282;
 }
@@ -87,4 +88,10 @@
 
 .yellow-bullet {
   background-color: yellow;
+}
+
+@media only screen and (max-width: 600px) {
+ .legend-list {
+   flex-direction: column;
+ }
 }

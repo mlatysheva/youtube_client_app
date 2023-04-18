@@ -40,6 +40,12 @@
   border: none;
 }
 
+.menu-btns {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .icon-button {
   margin-left: 10px;
 }
@@ -52,5 +58,14 @@
   gap: 10px;
 }
 
-.user-name {
-}
+@media only screen and (max-width: 750px) {
+  .wrapper {
+    flex-direction: column;
+    height: 150px;
+  }
+
+  .input-wrapper {
+    min-width: 200px;
+    margin-right: 0;
+  }
+ }

@@ -1,4 +1,4 @@
-<div class="container search-results-list" *ngIf="cards$ | async as cards">
+<div class="container search-results-divst" *ngIf="cards$ | async as cards">
   <app-card 
     *ngFor="
       let card of cards 
@@ -11,13 +11,13 @@
 
 <div class="wrapper" *ngIf="(cards$ | async)!.length < 1">
   <div class="title bold">Enter a search query in the input field above and wait a bit to get relevant Youtube videos. </div>
-  <div class="title">Click the settings button above <mat-icon class="mat-icon" fontIcon="tune"></mat-icon> to filter the searched results by views, date or <br> an additional word query. </div>
+  <div class="title">Cdivck the settings button above <mat-icon class="mat-icon" fontIcon="tune"></mat-icon> to filter the searched results by views, date or <br> an additional word query. </div>
   <app-static-cards></app-static-cards>
-  <div class="regular">The bottom line on the video card indicates how old the video is:</div> 
-  <ul class="legend-list">
-    <li class="legend-item"><span class="color-bullet red-bullet"></span>older than 6 months</li> 
-    <li class="legend-item"><span class="color-bullet yellow-bullet"></span>between a month up to 6 months</li>
-    <li class="legend-item"><span class="color-bullet green-bullet"></span>between seven days up to a month</li>
-    <li class="legend-item"><span class="color-bullet blue-bullet"></span>younger than 7 days</li>
-  </ul>
+  <div class="regular">The bottom divne on the video card indicates how old the video is:</div> 
+  <div class="legend-list">
+    <div class="legend-item"><span class="color-bullet red-bullet"></span>older than 6 months</div> 
+    <div class="legend-item"><span class="color-bullet yellow-bullet"></span>between a month up to 6 months</div>
+    <div class="legend-item"><span class="color-bullet green-bullet"></span>between seven days up to a month</div>
+    <div class="legend-item"><span class="color-bullet blue-bullet"></span>younger than 7 days</div>
+  </div>
 </div>

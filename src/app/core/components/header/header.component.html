@@ -19,7 +19,8 @@
           [formControl]="query"
         >
       </form>
-
+    </div>
+    <div class="menu-btns">
       <button mat-mini-fab
         class="icon-button"
         *ngIf="hasRoute('/main')"
@@ -37,26 +38,26 @@
       >
         <mat-icon fontIcon="add_circle"></mat-icon>        
       </button>
-    </div>
 
-    <div class="name-wrapper">
-      <div class="user-name" [innerText]="username"></div>
-      <button 
-        *ngIf="!isAuth"
-        mat-mini-fab 
-        color="primary"
-      >
-        <mat-icon fontIcon="account_circle"></mat-icon>
-      </button>
+      <div class="name-wrapper">
+        <div class="user-name" [innerText]="username"></div>
+        <button 
+          *ngIf="!isAuth"
+          mat-mini-fab 
+          color="primary"
+        >
+          <mat-icon fontIcon="account_circle"></mat-icon>
+        </button>
 
-      <button 
-        *ngIf="isAuth"
-        mat-mini-fab 
-        color="primary" 
-        (click)="onLogout()"
-      >
-        <mat-icon fontIcon="logout_circle"></mat-icon>        
-      </button>
+        <button 
+          *ngIf="isAuth"
+          mat-mini-fab 
+          color="primary" 
+          (click)="onLogout()"
+        >
+          <mat-icon fontIcon="logout_circle"></mat-icon>        
+        </button>
+      </div>
     </div>
   </div>
 </header>
