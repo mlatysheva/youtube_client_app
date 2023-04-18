@@ -39,10 +39,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![Admin screen](screenshots/screenshot_card_invalid.png)
 
-- For a successfully added video card, an alert appears:
-
-![Card added](screenshots/screenshot_card_created.png)
-
 - The searched Youtube cards are saved to the `Redux` store and retrieved from there
 
 ![Youtube cards are addede to the state](screenshots/screenshot_redux_youtubecards.png)

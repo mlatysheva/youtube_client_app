@@ -12,7 +12,7 @@ import { AppState } from '../../../redux/state.models';
 export class SearchResultsComponent {
 
   cards$ = this.store.select(selectAllCards);
-  
+
   constructor(
     public dashboardService: DashboardService,
     private store: Store<AppState>,

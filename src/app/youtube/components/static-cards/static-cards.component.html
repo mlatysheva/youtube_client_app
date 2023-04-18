@@ -1,0 +1,10 @@
+<div class="container search-results-list wrapper">
+  <app-card 
+    *ngFor="
+      let card of cardsToRender 
+        | filterByQuery: dashboardService.filterQuery
+        | sortByDate: dashboardService.dateSortOrder
+        | sortByViews: dashboardService.viewsSortOrder; let i=index"
+    [searchItem]="card">
+  </app-card>
+</div>

@@ -12,10 +12,12 @@ import { DetailsPageComponent } from './pages/details-page/details-page.componen
 import { YoutubeRoutingModule } from './youtube-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { youtubeCardsReducer } from '../redux/reducers/youtube.reducer';
+import { StaticCardsComponent } from './components/static-cards/static-cards.component';
 
 @NgModule({
   declarations: [
     SearchResultsComponent,
+    StaticCardsComponent,
     CardComponent,
     SortByDatePipe,
     SortByViewsPipe,

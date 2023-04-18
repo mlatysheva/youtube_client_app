@@ -3,3 +3,88 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.title {
+  height: 60px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #828282;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.regular {
+  margin-top: 30px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  color: #828282;
+}
+
+.mat-icon {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #2979ff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legend-list {
+  margin: 0 auto;
+  align-self: flex-start;
+  display: flex;
+  gap: 15px; 
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #828282;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.color-bullet {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.red-bullet {
+  background-color: red;
+}
+
+.blue-bullet {
+  background-color: #2979ff;
+}
+
+.green-bullet {
+  background-color: green;
+}
+
+.yellow-bullet {
+  background-color: yellow;
+}
