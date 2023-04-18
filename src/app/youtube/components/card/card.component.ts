@@ -11,6 +11,8 @@ import { DashboardService } from '../../../core/services/dashboard.service';
 export class CardComponent {
   @Input() searchItem?: ICard;
 
+  @Input() disabled = false;
+
   constructor(
     private router: Router,
     public dashboardService: DashboardService,

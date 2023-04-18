@@ -15,7 +15,8 @@
     </div>
   </div>
   <mat-card-title>{{searchItem!.snippet.title.split(' ').slice(0, 6).join(" ")}}</mat-card-title>
-  <button class="action-btn"
+  <button class="action-btn" 
+    [disabled]="disabled"
     (click)="renderDetails(searchItem.id)"
   >more...</button>
 
