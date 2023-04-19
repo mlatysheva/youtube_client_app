@@ -3,7 +3,13 @@
     (click)="goBack()"
   ></div>
   <div class="box-shadow">
-    <img class="main-card-image" [src]="searchItem.snippet.thumbnails.medium.url" [alt]="searchItem.snippet.title">
+    <div class="image-wrapper">
+      <a href="https://youtube.com/watch?v={{ id }}" target="_blank"> 
+        <button class="btn btn-play-main"></button>
+        <img class="main-card-image" [src]="searchItem.snippet.thumbnails.medium.url" [alt]="searchItem.snippet.title">
+      </a>
+    </div>
+    
     <div class="content-wrapper">
       <div class="title-date-wrapper">
         <div class="title">{{searchItem!.snippet.title.split(' ').slice(0, 6).join(" ")}}</div>
@@ -19,10 +25,6 @@
         <div class="icon-wrapper" title="likes">
           <mat-icon fontIcon="thumb_up"></mat-icon>
           <div>{{ searchItem.statistics.likeCount }}</div>
-        </div>
-        <div class="icon-wrapper" title="dislikes">
-          <mat-icon fontIcon="thumb_down"></mat-icon>
-          <div>{{ searchItem.statistics.dislikeCount }}</div>
         </div>
         <div class="icon-wrapper" title="comments">
           <mat-icon fontIcon="forum"></mat-icon>

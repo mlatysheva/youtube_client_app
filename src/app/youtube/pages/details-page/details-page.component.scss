@@ -12,12 +12,41 @@
   width: 32px;
   background-image: url('../../../../assets/icons/back_button.svg');
   cursor: pointer;
+  z-index: 10;
 }
 
 .box-shadow {
   display: flex;
   border-radius: 10px;
   box-shadow: 5px 20px 10px -15px var(--primary-color);
+}
+
+.image-wrapper {
+  font-size: 0;
+  align-self: center;  
+  height: 100%;
+  position: relative;
+}
+
+.btn-play-main {
+  width: 220px;
+  height: 220px;
+  cursor: pointer;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url(../../../../assets/icons/play-btn.svg);
+  background-color: var(--primary-color);
+  border: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 40%; 
+  z-index: 10;
+}
+
+.btn-play-main:hover {
+  background-color: aliceblue;
 }
 
 .main-card-image {
@@ -95,4 +124,78 @@
   width: 100%;
   background-color: var(--primary-color);
   border-bottom-right-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .search-item {
+    width: calc(730px + 32px);
+    height: fit-content;
+  }
+
+  .main-card-image {
+    border-bottom-left-radius: 0px;
+  }
+
+  .content-wrapper {
+    width: 730px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+  }
+
+  .box-shadow {
+    flex-direction: column;
+  }
+
+  .btn-play-main {
+    width: 200px;
+    height: 200px;
+  }  
+ }
+
+@media only screen and (min-width: 440px) and (max-width: 740px) {
+  .search-item {
+    width: calc(438px + 32px);
+  }
+
+  .content-wrapper {
+    width: 438px;
+  }
+
+  .box-shadow {
+    flex-direction: column;
+  }
+
+  .btn-play-main {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .main-card-image {
+    width: 438px;
+    height: 300px;
+  }
+ }
+
+ @media only screen and (min-width: 100px) and (max-width: 439px) {
+  .search-item {
+    width: calc(318px + 32px);
+  }
+
+  .box-shadow {
+    flex-direction: column;
+  }
+
+  .btn-play-main {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .main-card-image {
+    width: 318px;
+    height: 230px;
+  }
+
+  .content-wrapper {
+    width: 318px;
+  }
 }

@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   
   subscription: Subscription = new Subscription();
 
-  username = localStorage.getItem('login') || 'Your name';
+  username = localStorage.getItem('login') || 'Login';
 
   constructor(
     public authService: AuthService,
@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ) {
     this.subscription = this.authService.isAuth$.subscribe((value) => {
       this.isAuth = value;
-      this.username = localStorage.getItem('login') || 'Your name';
+      this.username = localStorage.getItem('login') || 'Login';
     });
   }
 
@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.query.valueChanges
       .pipe(
         filter((query) => query.length >= 3),
-        debounceTime(1000),
+        debounceTime(500),
         distinctUntilChanged(),
         map((query) => query.toLowerCase()),
         tap((query) => this.store.dispatch(loadSearchedVideos({ query }))),

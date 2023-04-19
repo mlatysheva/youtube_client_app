@@ -15,12 +15,17 @@ export class DetailsPageComponent implements OnInit {
 
   searchItem$!: Observable<ICard | undefined>;
 
+  id = '';
+
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private store: Store<AppState>,
-  ) {}
+  ) {
+    const { id } = this.route.snapshot.params;
+    this.id = id;
+  }
 
   ngOnInit(): void {
     const { id } = this.route.snapshot.params;
