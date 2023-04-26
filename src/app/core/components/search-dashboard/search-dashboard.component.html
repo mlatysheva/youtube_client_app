@@ -7,22 +7,22 @@
       (click)="sortByDate()"
     >         
       <span>date</span>
-      <mat-icon *ngIf="dateSortOrder === 'asc'">keyboard_arrow_up</mat-icon>
-      <mat-icon *ngIf="dateSortOrder === 'desc'">keyboard_arrow_down</mat-icon>      
+      <mat-icon *ngIf="dateSortOrder === 'asc'">keyboard_arrow_down</mat-icon>
+      <mat-icon *ngIf="dateSortOrder === 'desc'">keyboard_arrow_up</mat-icon>      
     </div>
     <div class="search-option"
       (click)="sortByViews()"
     >      
       <span>views</span>
-      <mat-icon *ngIf="viewsSortOrder === 'asc'">keyboard_arrow_up</mat-icon>
-      <mat-icon *ngIf="viewsSortOrder === 'desc'">keyboard_arrow_down</mat-icon>      
+      <mat-icon *ngIf="viewsSortOrder === 'asc'">keyboard_arrow_down</mat-icon>
+      <mat-icon *ngIf="viewsSortOrder === 'desc'">keyboard_arrow_up</mat-icon>      
     </div>
     <div class="search-option"
       (click)="sortByDuration()"
     >      
       <span>duration</span>
-      <mat-icon *ngIf="durationSortOrder === 'asc'">keyboard_arrow_up</mat-icon>
-      <mat-icon *ngIf="durationSortOrder === 'desc'">keyboard_arrow_down</mat-icon>      
+      <mat-icon *ngIf="durationSortOrder === 'asc'">keyboard_arrow_down</mat-icon>
+      <mat-icon *ngIf="durationSortOrder === 'desc'">keyboard_arrow_up</mat-icon>      
     </div>
     <div class="search-input-wrapper">
       <label class="input-label">by word or sentence</label>
