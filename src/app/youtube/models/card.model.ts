@@ -4,6 +4,7 @@ export interface ICard {
   id: string,
   snippet: ISnippet,
   statistics: IStatistics,
+  contentDetails?: IContentDetails,
 }
 
 export interface ISnippet {
@@ -44,6 +45,10 @@ export interface IStatistics {
   dislikeCount?: string,
   favoriteCount: string,
   commentCount?: string,
+}
+
+export interface IContentDetails {
+  duration?: string,
 }
 
 export interface ICardToAdd {

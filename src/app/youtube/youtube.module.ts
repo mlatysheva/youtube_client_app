@@ -13,6 +13,7 @@ import { YoutubeRoutingModule } from './youtube-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { youtubeCardsReducer } from '../redux/reducers/youtube.reducer';
 import { StaticCardsComponent } from './components/static-cards/static-cards.component';
+import { SortByDurationPipe } from './pipes/sort-by-duration.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { StaticCardsComponent } from './components/static-cards/static-cards.com
     CardComponent,
     SortByDatePipe,
     SortByViewsPipe,
+    SortByDurationPipe,
     FilterByQueryPipe,
     MainPageComponent,
     ShowAgeDirective,

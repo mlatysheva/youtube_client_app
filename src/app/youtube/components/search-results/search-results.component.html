@@ -4,7 +4,8 @@
       let card of cards 
         | filterByQuery: dashboardService.filterQuery
         | sortByDate: dashboardService.dateSortOrder
-        | sortByViews: dashboardService.viewsSortOrder; let i=index"
+        | sortByViews: dashboardService.viewsSortOrder
+        | sortByDuration: dashboardService.durationSortOrder; let i=index"
     [searchItem]="card">
   </app-card>
 </div>

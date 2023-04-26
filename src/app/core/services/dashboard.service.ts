@@ -12,6 +12,8 @@ export class DashboardService {
 
   viewsSortOrder = '';
 
+  durationSortOrder = '';
+
   filterQuery = '';
 
   setFilterQuery(value: string): void {
@@ -35,6 +37,14 @@ export class DashboardService {
       this.viewsSortOrder = ORDER.asc;
     } else {
       this.viewsSortOrder = ORDER.desc;
+    }
+  }
+
+  sortByDuration(): void {
+    if (this.durationSortOrder === ORDER.desc) {
+      this.durationSortOrder = ORDER.asc;
+    } else {
+      this.durationSortOrder = ORDER.desc;
     }
   }
 }

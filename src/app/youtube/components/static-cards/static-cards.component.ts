@@ -30,6 +30,9 @@ export class StaticCardsComponent {
       favoriteCount: '0',
       commentCount: '2235',
     },
+    contentDetails: {
+      duration: '02:02:42',
+    },
   },
   { id: 'nQ2A30cD3Q8',
     snippet: {
@@ -50,6 +53,9 @@ export class StaticCardsComponent {
       favoriteCount: '0',
       commentCount: '1629',
     },
+    contentDetails: {
+      duration: '00:03:48',
+    },
   },
   { id: '3dHNOWTI7H8',
     snippet: {
@@ -69,6 +75,9 @@ export class StaticCardsComponent {
       likeCount: '19069',
       favoriteCount: '0',
       commentCount: '1314',
+    },
+    contentDetails: {
+      duration: '02:01:32',
     },
   },
   ];

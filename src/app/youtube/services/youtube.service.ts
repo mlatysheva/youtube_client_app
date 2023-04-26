@@ -4,6 +4,8 @@ import { ICard } from '../models/card.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject, catchError, map, of, switchMap } from 'rxjs';
 import { Store } from '@ngrx/store';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import moment from 'moment';
 
 @Injectable({
   providedIn: 'root',
@@ -25,10 +27,12 @@ export class YoutubeService {
   }
 
   getOne(id: string): Observable<ICard> {
-    const searchRequestOneUrl = `videos?id=${id}&part=snippet,statistics`;
+    const searchRequestOneUrl = `videos?id=${id}&part=snippet,statistics,contentDetails`;
     return this.http.get(`${searchRequestOneUrl}`).pipe(
       map((res: any) => {
         const video = res.items[0];
+        const seconds = moment.duration(video.contentDetails.duration).asSeconds();
+        video.contentDetails.duration = moment.utc(seconds * 1000).format('HH:mm:ss');
         return video;
       }),
     );
@@ -48,9 +52,15 @@ export class YoutubeService {
   }
 
   getStatistics(videoIds: string[]): Observable<ICard[]> {
-    const statisticsRequestUrl = `videos?id=${videoIds.join()}&part=snippet,statistics`;
+    const statisticsRequestUrl = `videos?id=${videoIds.join()}&part=snippet,statistics,contentDetails`;
     return this.http.get(statisticsRequestUrl).pipe(
       map((res: any) => {
+        res.items.map((item: ICard) => {
+          if (item.contentDetails && item.contentDetails.duration) {
+            const seconds = moment.duration(item.contentDetails.duration).asSeconds();
+            item.contentDetails.duration = moment.utc(seconds * 1000).format('HH:mm:ss');
+          }
+        });
         this.searchResults = res.items;
         return res.items;
       }),

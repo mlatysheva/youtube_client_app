@@ -20,6 +20,8 @@ export class SearchDashboardComponent {
 
   viewsSortOrder = ORDER.desc;
 
+  durationSortOrder = ORDER.desc;
+
   setFilterByWord(): void {
     this.dashboardService.setFilterQuery(this.filterQuery);
   }
@@ -40,5 +42,14 @@ export class SearchDashboardComponent {
       this.viewsSortOrder = ORDER.desc;
     }
     this.dashboardService.sortByViews();
+  }
+
+  sortByDuration(): void {
+    if (this.durationSortOrder === ORDER.desc) {
+      this.durationSortOrder = ORDER.asc;
+    } else {
+      this.durationSortOrder = ORDER.desc;
+    }
+    this.dashboardService.sortByDuration();
   }
 }

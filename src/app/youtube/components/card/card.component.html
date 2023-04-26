@@ -1,17 +1,21 @@
 <mat-card *ngIf="searchItem" class="search-item">
   <img class="main-card-image" [src]="searchItem.snippet.thumbnails.medium.url" [alt]="searchItem.snippet.title">
   <div class="icons-wrapper">
-    <div title="views">
+    <div class="icon-wrapper" title="views">
       <mat-icon fontIcon="visibility"></mat-icon>
       <div>{{ searchItem.statistics.viewCount }}</div>
     </div>
-    <div title="likes">
+    <div class="icon-wrapper" title="likes">
       <mat-icon fontIcon="thumb_up"></mat-icon>
       <div>{{ searchItem.statistics.likeCount }}</div>
     </div>
-    <div title="comments">
+    <div class="icon-wrapper" title="comments">
       <mat-icon fontIcon="forum"></mat-icon>
       <div>{{ searchItem.statistics.commentCount }}</div>
+    </div>
+    <div class="icon-wrapper" title="duration">
+      <mat-icon fontIcon="timer"></mat-icon>
+      <div>{{ searchItem.contentDetails?.duration }}</div>
     </div>
   </div>
   <mat-card-title>{{searchItem!.snippet.title.split(' ').slice(0, 6).join(" ")}}</mat-card-title>
